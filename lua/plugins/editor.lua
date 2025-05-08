@@ -37,4 +37,12 @@ return {
             require("bufferline").setup {}
         end
     },
+    -- Minimap
+    {
+        "Isrothy/neominimap.nvim"
+    },
+    -- Rulers
+    {
+        "lukas-reineke/virt-column.nvim",
+    },
 }
