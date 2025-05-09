@@ -37,12 +37,15 @@ return {
             require("bufferline").setup {}
         end
     },
-    -- Minimap
-    {
-        "Isrothy/neominimap.nvim"
-    },
     -- Rulers
     {
         "lukas-reineke/virt-column.nvim",
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    }
 }

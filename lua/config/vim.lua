@@ -1,5 +1,10 @@
 -- Set line numbers
 vim.wo.number = true
+vim.wo.relativenumber = true
+vim.opt.statuscolumn = "%=%{v:lnum}:%{v:relnum ? v:relnum : '·'} %s"
+
+-- Set the cursor line
+vim.wo.cursorline = true
 
 -- Disable swap files
 vim.opt.swapfile = false

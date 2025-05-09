@@ -1,7 +1,3 @@
--- LSP
---vim.lsp.enable("pyright")
---
-
 -- Vim editor config
 require("config.vim")
 
