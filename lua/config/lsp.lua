@@ -28,3 +28,15 @@ vim.diagnostic.config({
         },
     },
 })
+
+-- Swift support via sourcekit-lsp
+local lspconfig = require("lspconfig")
+lspconfig.sourcekit.setup({
+    capabilities = {
+        workspace = {
+            didChangeWatchedFiles = {
+                dynamicRegistration = true,
+            },
+        },
+    },
+})
