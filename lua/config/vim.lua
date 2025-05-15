@@ -3,6 +3,16 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.statuscolumn = "%=%{v:lnum}:%{v:relnum ? v:relnum : '·'} %s"
 
+-- Disable the status column for NvimTree buffers
+vim.api.nvim_create_augroup("NvimTreeStatuscolumn", { clear = true })
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  group = "NvimTreeStatuscolumn",
+  pattern = {"NvimTree_*"}, -- Match NvimTree buffer names
+  callback = function()
+    vim.opt_local.statuscolumn = ""
+  end,
+})
+
 -- Set the cursor line
 vim.wo.cursorline = true
 
