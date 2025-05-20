@@ -15,13 +15,18 @@ local ignore_filetypes_list = {
 
 -- Enable hidden files on Telescope
 local telescope = require('telescope')
-  telescope.setup {
-    defaults = {
-      file_ignore_patterns = ignore_filetypes_list,
+telescope.setup {
+  defaults = {
+    file_ignore_patterns = ignore_filetypes_list,
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
     },
-    pickers = {
-      find_files = {
-        hidden = true,
+    live_grep = {
+      additional_args = function(opts)
+        return { "--hidden" }
+      end,
     },
   },
 }
