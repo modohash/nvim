@@ -2,7 +2,7 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)-- NvimTree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) -- NvimTree
 
 -- Telescope
 keymap("n", "<leader>f", ":Telescope find_files<cr>", { desc = "Telescope find files" })

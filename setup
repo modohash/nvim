@@ -3,3 +3,7 @@
 # Deps for telescope
 brew install ripgrep
 brew install fd
+
+# Deps for pre-commit
+pip install -r requirements.txt
+pre-commit install -f
