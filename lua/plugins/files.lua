@@ -19,4 +19,8 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 	},
+	-- Hologram (File preview)
+	{
+		"edluffy/hologram.nvim",
+	},
 }

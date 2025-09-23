@@ -30,8 +30,7 @@ vim.diagnostic.config({
 })
 
 -- Swift support via sourcekit-lsp
-local lspconfig = require("lspconfig")
-lspconfig.sourcekit.setup({
+vim.lsp.config("sourcekit", {
 	capabilities = {
 		workspace = {
 			didChangeWatchedFiles = {
@@ -40,3 +39,4 @@ lspconfig.sourcekit.setup({
 		},
 	},
 })
+vim.lsp.enable("sourcekit")

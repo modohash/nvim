@@ -13,7 +13,6 @@ local ignore_filetypes_list = {
 	"__pycache__",
 	"%.xlsx",
 	"%.jpg",
-	"%.png",
 	"%.webp",
 	"%.pdf",
 	"%.odt",
@@ -25,7 +24,9 @@ local ignore_filetypes_list = {
 }
 
 -- Enable hidden files on Telescope
+require("hologram").setup({})
 local telescope = require("telescope")
+local hologram_previewer = require("config.telescope_extensions.hologram")
 telescope.setup({
 	defaults = {
 		file_ignore_patterns = ignore_filetypes_list,
